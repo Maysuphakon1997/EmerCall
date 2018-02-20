@@ -3,7 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <!--Red Layout-->
     <LinearLayout
         android:background="#82ffffff"
@@ -34,6 +33,17 @@
                   android:layout_width="match_parent"
                   android:layout_height="match_parent" />
 
+              <!--title-->
+              <TextView
+                  android:padding="5dp"
+                 android:gravity="center_horizontal"
+                  android:background="#82000000"
+                  android:textStyle="bold"
+                  android:text="statin 1"
+                  android:textSize="18sp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
           </RelativeLayout>
 
 
@@ -49,6 +59,18 @@
                   android:src="@drawable/station2"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent" />
+              <!--title-->
+              <TextView
+                  android:layout_alignParentBottom="true"
+                  android:padding="5dp"
+                  android:gravity="center_horizontal"
+                  android:background="#82000000"
+                  android:textStyle="bold"
+                  android:text="statin "
+                  android:textSize="18sp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
 
           </RelativeLayout>
 
