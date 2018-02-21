@@ -1,11 +1,13 @@
 package may.snru.th.ac.th.emercall.fragment;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import may.snru.th.ac.th.emercall.R;
 
@@ -14,6 +16,24 @@ import may.snru.th.ac.th.emercall.R;
  */
 
 public class MainFragment extends Fragment{
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        //  For Station 1
+        ImageView Station1ImageView = getView().findViewById(R.id.imageViewStation1);
+
+        //  For Station 2
+
+        //  For Station 3
+
+        //  For Station 4
+
+
+
+    }// Main Method
+
 
     @Nullable
     @Override
