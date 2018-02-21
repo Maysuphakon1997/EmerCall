@@ -59,10 +59,53 @@ public class MainFragment extends Fragment {
 
         //  For Station 2
 
+        ImageView station2ImageView = getView().findViewById(R.id.imageViewStation2);
+        station2ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("2222");
+            }
+        });
+        TextView station2TextView = getView().findViewById(R.id.textViewstation2);
+        station2TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("2222");
+            }
+        });
+
         //  For Station 3
 
-        //  For Station 4
+        ImageView station3ImageView = getView().findViewById(R.id.imageViewStation3);
+        station3ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("3333");
+            }
+        });
+        TextView station3TextView = getView().findViewById(R.id.textViewstation3);
+        station3TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("3333");
+            }
+        });
 
+        //  For Station 4
+        ImageView station4ImageView = getView().findViewById(R.id.imageViewStation4);
+        station4ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("4444");
+            }
+        });
+        TextView station4TextView = getView().findViewById(R.id.textViewstation4);
+        station4TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("4444");
+            }
+        });
 
     }// Main Method
 
