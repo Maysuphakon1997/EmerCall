@@ -1,8 +1,13 @@
 package may.snru.th.ac.th.emercall.fragment;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.util.StateSet;
@@ -18,12 +23,10 @@ import may.snru.th.ac.th.emercall.R;
  * Created by Admin on 20/2/2561.
  */
 
-public class MainFragment extends Fragment
+public class MainFragment extends Fragment {
 
-   //    Explicit
+    //    Explicit
     private String tag = "MyTagV1";
-
-
 
 
     @Override
@@ -32,16 +35,17 @@ public class MainFragment extends Fragment
 
         //  For Station 1
         ImageView Station1ImageView = getView().findViewById(R.id.imageViewStation1);
-                    Station1ImageView.setOnClickListener(new View.OnClickListener() {
+        Station1ImageView.setOnClickListener(new View.OnClickListener() {
 
-                        @Override
-                        public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
 
-                            Log.d(tag, "You click Image Station1");
+                Log.d(tag, "You click Image Station1");
+                callStation("1111");
 
 
-                        }
-                    });
+            }
+        });
 
         TextView station1TextView = getView().findViewById(R.id.textViewstation1);
         station1TextView.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +53,7 @@ public class MainFragment extends Fragment
             public void onClick(View view) {
 
                 Log.d(tag, "Click Text " + getString(R.string.station1));
+                callStation("1111");
             }
         });
 
@@ -59,11 +64,27 @@ public class MainFragment extends Fragment
         //  For Station 4
 
 
-
     }// Main Method
 
     public void callStation(String numberCall) {
 
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:=" + numberCall));
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        getActivity().startActivity(intent);
+
+
+
+        // callStation
     }
 
 
