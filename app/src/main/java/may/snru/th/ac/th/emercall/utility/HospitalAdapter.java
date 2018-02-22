@@ -1,10 +1,16 @@
 package may.snru.th.ac.th.emercall.utility;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import may.snru.th.ac.th.emercall.R;
 
 /**
  * Created by Admin on 22/2/2561.
@@ -43,12 +49,18 @@ public class HospitalAdapter extends BaseAdapter{
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view1 = layoutInflater.inflate(R.layout.listview_layout, viewGroup, false);
+
+        ImageView imageView = view1.findViewById(R.id.imageListView);
+        TextView titleTextView = view1.findViewById(R.id.textViewTitle);
+        TextView phoneTextView = view1.findViewById(R.id.textViewPhone);
+
+        imageView.setImageResource (ints[i]);
+        titleTextView.setText(titleStrings[i]);
+        phoneTextView.setText(phoneStrings[i]);
+
+        return view1;
 
 
-
-
-
-
-        return null;
     }
 }   // Main Class
