@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.contentMainFragment, new MainFragment()).commit();
+                drawerLayout.closeDrawers();
             }
         });
 
@@ -50,17 +51,27 @@ public class MainActivity extends AppCompatActivity {
 
 
 //        Insurance Controller
-        TextView hospitalTextView = findViewById(R.id.txtHospital);
+        TextView insuranceTextView  = findViewById(R.id.txtHospital);
         hospitalTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.contentMainFragment,new MainFragment()).commit();
+                drawerLayout.closeDrawers();
             }
         });
 
 
 //        Exit Controller
+        TextView ExitTextView = findViewById(R.id.txtHospital);
+        hospitalTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contentMainFragment,new MainFragment()).commit();
+                drawerLayout.closeDrawers();
+            }
+        });
 
 
 
